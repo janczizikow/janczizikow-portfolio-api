@@ -1,19 +1,19 @@
 AllCops:
   Exclude:
-   - 'bin/*'
-   - 'config/**/*'
-   - 'db/**/*'
-   - 'vendor/bundle/**/*'
-   - '**/Gemfile'
-   - '**/Rakefile'
-   - 'spec/spec_helper.rb'
-   - 'spec/rails_helper.rb'
-   - 'spec/support/**/*'
-   - 'node_modules/**/*'
-   - 'app/views/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'vendor/bundle/**/*'
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/support/**/*'
+    - 'node_modules/**/*'
+    - 'app/views/**/*'
 
 Rails:
- Enabled: true
+  Enabled: true
 
 Naming/VariableNumber:
   EnforcedStyle: 'snake_case'
