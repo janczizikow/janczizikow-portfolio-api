@@ -32,6 +32,7 @@ gem 'devise'
 gem 'devise-jwt'
 gem 'pundit'
 gem 'friendly_id'
+gem 'validates_email_format_of'
 
 group :development, :test do
   gem 'dotenv-rails'

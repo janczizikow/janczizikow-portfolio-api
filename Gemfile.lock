@@ -244,6 +244,8 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
+    validates_email_format_of (1.6.3)
+      i18n
     warden (1.2.7)
       rack (>= 1.0)
     warden-jwt_auth (0.3.5)
@@ -283,6 +285,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+  validates_email_format_of
 
 RUBY VERSION
    ruby 2.4.4p296
