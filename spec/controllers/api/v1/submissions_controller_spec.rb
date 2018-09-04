@@ -27,7 +27,7 @@ RSpec.describe Api::V1::SubmissionsController, type: :controller do
     end
   end
 
-  describe 'GET #destroy' do
+  describe 'DELETE #destroy' do
     it 'returns 401' do
       delete :destroy, params: {id: submission}
       expect(response).to have_http_status(401)

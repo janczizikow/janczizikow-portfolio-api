@@ -7,7 +7,7 @@ module Api
       before_action :set_submission, only: %i[show destroy]
 
       def index
-        @submissions = policy_scope(Submission)
+        @submissions = policy_scope(Submission.all)
         authorize @submissions
         render json: @submissions, status: :ok
       end
