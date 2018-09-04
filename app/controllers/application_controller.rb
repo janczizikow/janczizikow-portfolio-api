@@ -7,4 +7,7 @@ class ApplicationController < ActionController::API
   respond_to :json
 
   before_action :authenticate_user!, unless: :devise_controller?
+
+  after_action :verify_authorized, unless: :devise_controller?
+  after_action :verify_policy_scoped, only: :index, unless: :devise_controller?
 end

@@ -9,4 +9,9 @@ Rails.application.routes.draw do
                 format: :json
               }
 
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :submissions, only: %i[index show create destroy]
+    end
+  end
 end
