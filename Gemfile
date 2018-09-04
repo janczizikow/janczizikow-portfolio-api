@@ -35,6 +35,7 @@ gem 'friendly_id'
 gem 'validates_email_format_of'
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'dotenv-rails'
   gem 'pry-byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
