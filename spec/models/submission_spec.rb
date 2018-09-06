@@ -3,23 +3,25 @@
 require 'rails_helper'
 
 RSpec.describe Submission, type: :model do
+  let(:submission) { build(:submission) }
+
   it 'has a valid factory' do
-    build(:submission).should be_valid
+    expect(submission).to be_valid
   end
 
   it 'requires a name' do
-    build(:submission, name: '').should_not be_valid
+    expect(build(:submission, name: '')).not_to be_valid
   end
 
   it 'requires a message' do
-    build(:submission, message: '').should_not be_valid
+    expect(build(:submission, message: '')).not_to be_valid
   end
 
   it 'requires an email' do
-    build(:submission, email: '').should_not be_valid
+    expect(build(:submission, email: '')).not_to be_valid
   end
 
   it 'requires a valid email' do
-    build(:submission, email: 'asd@asd').should_not be_valid
+    expect(build(:submission, email: 'joe@shmoe')).not_to be_valid
   end
 end
