@@ -7,8 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'localhost:3000', # FIXME: keeping localhost for testing for now
-             'https://www.janczizikow.com'
+    origins 'https://www.janczizikow.com'
 
     resource '/api/v1/*',
       methods: %i[get post put patch delete options],
