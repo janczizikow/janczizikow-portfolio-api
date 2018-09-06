@@ -1,0 +1,6 @@
+Hey there,
+
+MyString (<%= @submission.email %>) just submitted the form on janczizikow.com/contact. Here's what they had to say:
+MyText
+
+The form was submitted at <%= @submission.created_at %>
