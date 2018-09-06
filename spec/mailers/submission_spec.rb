@@ -13,10 +13,10 @@ RSpec.describe SubmissionMailer, type: :mailer do
       expect(mail.from).to eq(['jan.czizikow@gmail.com'])
     end
 
-    it 'renders the body' do
-      pending "figure out how to test mail body with fixtures! #{__FILE__}"
-      # expect(mail.body.to_s).to match(read_fixture('confirm').join)
-    end
+    pending "figure out how to test mail body with fixtures! #{__FILE__}"
+    # it 'renders the body' do
+    #   expect(mail.body.to_s).to match(read_fixture('confirm').join)
+    # end
   end
 
   describe 'notify' do
@@ -29,9 +29,9 @@ RSpec.describe SubmissionMailer, type: :mailer do
       expect(mail.from).to eq(['jan.czizikow@gmail.com'])
     end
 
-    it 'renders the body' do
-      pending "figure out how to test mail body with fixtures! #{__FILE__}"
-      # expect(mail.body.encoded).to match('Hi')
-    end
+    pending "figure out how to test mail body with fixtures! #{__FILE__}"
+    # it 'renders the body' do
+    #   expect(mail.body.encoded).to match('Hi')
+    # end
   end
 end
