@@ -7,7 +7,7 @@ module Api
       before_action :set_project, only: %i[show update destroy]
 
       def index
-        @projects = policy_scope(Project)
+        @projects = policy_scope(Project).order('date DESC')
         authorize @projects
         render json: @projects, status: :ok
       end
