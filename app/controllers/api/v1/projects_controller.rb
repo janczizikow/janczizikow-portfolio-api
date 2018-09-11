@@ -13,14 +13,14 @@ module Api
       end
 
       def show
-        render json: @project, status: :ok
+        render json: @project.to_json(methods: %i[next prev]), status: :ok
       end
 
       def create
         @project = Project.new(project_params)
         authorize @project
         if @project.save
-          render json: @project, status: :created
+          render json: @project.to_json(methods: %i[next prev]), status: :created
         else
           render json: @project.errors, status: :unprocessable_entity
         end
@@ -28,7 +28,7 @@ module Api
 
       def update
         if @project.update(project_params)
-          render json: @project, status: :ok
+          render json: @project.to_json(methods: %i[next prev]), status: :ok
         else
           render json: @project.errors, status: :unprocessable_entity
         end
