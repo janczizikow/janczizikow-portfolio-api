@@ -3,8 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ProjectsController, type: :controller do
-  let(:project) { build(:project) }
-  let(:new_project) { create(:project) }
+  let(:project) { create(:project) }
+  let(:new_project) { build(:project) }
 
   describe 'GET #index' do
     it 'returns http success' do
@@ -15,7 +15,7 @@ RSpec.describe Api::V1::ProjectsController, type: :controller do
 
   describe 'GET #show' do
     it 'returns http success' do
-      get :show, params: {id: project.friendly_id}
+      get :show, params: {id: project}
       expect(response).to have_http_status(:success)
     end
   end
