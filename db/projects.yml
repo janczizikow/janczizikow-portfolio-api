@@ -1,0 +1,26 @@
+---
+- name: Skatespots
+  description: As a final project for my Ruby on Rails coding bootcamp I've built a shamless Airbnb copy. There's just a tiny twist - the platform focuses on skatespots rather then flats.
+  date: 31 Aug 2018
+  category: Website
+  links:
+    - text: View Site
+      url: https://www.skatespots.app/?ref=www.janczizikow.com
+- name: Jekyll Sleek
+  description: Design and development of a gem-based jekyll theme focused on speed performance and minimalistic style. Heavily inspired by… well, my own website.
+  date: 18 Feb 2018
+  category: Website
+  links:
+    - text: View on Github
+      url: https://github.com/janczizikow/sleek
+    - text: View Demo Site
+      url: https://janczizikow.github.io/sleek/
+- name: Blanccstate
+  description: "Web design and development of a landing page for an artist. The EP wasn’t released yet, but the website is up and running. Thanks to modern tech (GatsbyJS & React) the browsing experience is lightning fast! Check it out:"
+  date: 18 Feb 2018
+  category: Website
+  links:
+    - text: View on Github
+      url: https://github.com/janczizikow/blancc-state
+    - text: View Site
+      url: https://www.blanccstate.com/?ref=www.janczizikow.com

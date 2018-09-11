@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_020044) do
+ActiveRecord::Schema.define(version: 2018_09_10_220558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 2018_09_04_020044) do
     t.string "jti", null: false
     t.datetime "exp", null: false
     t.index ["jti"], name: "index_jwt_blacklist_on_jti"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name", null: false
+    t.date "date"
+    t.string "slug", null: false
+    t.string "category"
+    t.text "description"
+    t.text "links"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_projects_on_slug", unique: true
   end
 
   create_table "submissions", force: :cascade do |t|
