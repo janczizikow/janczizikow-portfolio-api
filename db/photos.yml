@@ -1,0 +1,28 @@
+---
+- name: Minimal Portfolio
+  photos:
+    - https://www.janczizikow.com/images/projects/minimal-portfolio/minimal-portfolio-1_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/minimal-portfolio/minimal-portfolio-2_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/minimal-portfolio/minimal-portfolio-3_lg@2x.jpg
+- name: The clinic
+  photos:
+    - https://www.janczizikow.com/images/projects/the-clinic/the-clinic-1_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/the-clinic/the-clinic-2_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/the-clinic/the-clinic-3_lg@2x.jpg
+- name: Blanccstate
+  photos:
+    - https://www.janczizikow.com/images/projects/blanccstate/blanccstate-1_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/blanccstate/blanccstate-2_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/blanccstate/blanccstate-3_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/blanccstate/blanccstate-4_lg@2x.jpg
+- name: Jekyll Sleek
+  photos:
+    - https://www.janczizikow.com/images/projects/jekyll-sleek/jekyll-sleek-1_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/jekyll-sleek/jekyll-sleek-2_lg@2x.jpg
+- name: Skatespots
+  photos:
+    - https://www.janczizikow.com/images/projects/skatespots/skatespots-1_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/skatespots/skatespots-2_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/skatespots/skatespots-3_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/skatespots/skatespots-4_lg@2x.jpg
+    - https://www.janczizikow.com/images/projects/skatespots/skatespots-5_lg@2x.jpg
