@@ -55,7 +55,9 @@ module Api
       end
 
       def render_json
-        @project.to_json(include: {photos: {except: :project_id}}, methods: %i[next prev])
+        @project.to_json(except: :thumbnail,
+                         include: {photos: {except: :project_id}},
+                         methods: %i[next prev])
       end
     end
   end
