@@ -12,7 +12,11 @@ class Project < ApplicationRecord
   serialize :links, Array
 
   # associations
-  has_many :photos, dependent: :destroy
+  has_many :photos, inverse_of: :project, dependent: :destroy
+
+  accepts_nested_attributes_for :photos,
+                                reject_if: proc { |attributes| attributes[:photo].blank? },
+                                allow_destroy: true
 
   # validations
   validates :name, :slug, :description, presence: true

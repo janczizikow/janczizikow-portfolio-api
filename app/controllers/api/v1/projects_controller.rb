@@ -50,7 +50,8 @@ module Api
       end
 
       def project_params
-        params.require(:project).permit(:name, :date, :category, :description, :links)
+        params.require(:project).permit(:name, :date, :category, :description, :links,
+                                        photo_attributes: %i[id photo _destroy])
       end
     end
   end
