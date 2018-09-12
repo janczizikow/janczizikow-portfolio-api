@@ -11,6 +11,10 @@ class Project < ApplicationRecord
 
   serialize :links, Array
 
+  # associations
+  has_many :photos, dependent: :destroy
+
+  # validations
   validates :name, :slug, :description, presence: true
 
   def next
