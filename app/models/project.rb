@@ -4,6 +4,8 @@ class Project < ApplicationRecord
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
 
+  mount_uploader :thumbnail, ThumbnailUploader
+
   scope :next, ->(id) { where('id > ?', id).order('id ASC') }
   scope :previous, ->(id) { where('id < ?', id).order('id DESC') }
 
