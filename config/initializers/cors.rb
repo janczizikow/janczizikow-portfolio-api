@@ -6,7 +6,7 @@
 # Read more: https://github.com/cyu/rack-cors
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://www.janczizikow.com'
+    origins Rails.env.production? ? 'https://www.janczizikow.com' : '*'
 
     resource '/api/v1/*',
       methods: %i[get post put patch delete options],
