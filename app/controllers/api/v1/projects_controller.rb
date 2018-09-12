@@ -13,14 +13,14 @@ module Api
       end
 
       def show
-        render json: @project.to_json(methods: %i[next prev]), status: :ok
+        render json: render_json, status: :ok
       end
 
       def create
         @project = Project.new(project_params)
         authorize @project
         if @project.save
-          render json: @project.to_json(methods: %i[next prev]), status: :created
+          render json: render_json, status: :created
         else
           render json: @project.errors, status: :unprocessable_entity
         end
@@ -28,7 +28,7 @@ module Api
 
       def update
         if @project.update(project_params)
-          render json: @project.to_json(methods: %i[next prev]), status: :ok
+          render json: render_json, status: :ok
         else
           render json: @project.errors, status: :unprocessable_entity
         end
@@ -50,7 +50,12 @@ module Api
       end
 
       def project_params
-        params.require(:project).permit(:name, :date, :category, :description, :links)
+        params.require(:project).permit(:name, :date, :category, :description, :links,
+                                        photos_attributes: %i[id photo remote_photo_url _destroy])
+      end
+
+      def render_json
+        @project.to_json(include: {photos: {except: :project_id}}, methods: %i[next prev])
       end
     end
   end

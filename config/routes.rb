@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       resources :projects, only: %i[index show create update destroy]
     end
   end
+
+  match "*path", to: "errors#catch_404", via: :all
 end
