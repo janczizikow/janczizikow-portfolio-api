@@ -11,15 +11,16 @@ RSpec.describe 'Submissions', type: :request do
 
   pending "figure out how to test submissions with authorization! #{__FILE__}"
 
-  # describe '#index' do
-  #   it 'returns 200' do
-  #     headers = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
-  #     # This will add a valid token for `user` in the `Authorization` header
-  #     auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, user)
-  #     get url, headers: auth_headers
-  #     expect(response).to have_http_status(200)
-  #   end
-  # end
+  describe '#index' do
+    it 'returns 200' do
+      headers = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
+      # This will add a valid token for `user` in the `Authorization` header
+      auth_headers = Devise::JWT::TestHelpers.auth_headers(headers, user)
+      get url, headers: auth_headers
+      p auth_headers
+      expect(response).to have_http_status(200)
+    end
+  end
 
   # describe '#show' do
   #   it 'returns 200' do
