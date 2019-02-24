@@ -4,6 +4,6 @@ FactoryBot.define do
   factory :photo do
     sequence(:id) { |n| n }
     photo { 'MyString' }
-    project nil
+    # project nil
   end
 end
