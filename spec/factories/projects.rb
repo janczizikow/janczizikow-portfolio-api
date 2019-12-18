@@ -8,6 +8,6 @@ FactoryBot.define do
     sequence(:slug) { |n| "mystring#{n}" }
     category { 'MyString' }
     description { 'MyText' }
-    links [{text: 'MyText', url: 'https://www.github.com'}]
+    links { [{text: 'MyText', url: 'https://www.github.com'}] }
   end
 end
